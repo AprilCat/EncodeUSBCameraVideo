@@ -3,4 +3,15 @@ project(vaapi_test)
 
 set(CMAKE_CXX_STANDARD 14)
 
+link_libraries(
+        opencv
+        pthread
+        dl
+        opencv_video
+        opencv_highgui
+        opencv_core
+        opencv_imgproc
+        opencv_videoio
+)
+
 add_executable(vaapi_test main.cpp)

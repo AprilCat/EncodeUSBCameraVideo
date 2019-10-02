@@ -1,10 +1,18 @@
 #include <iostream>
 #include <opencv2/opencv.hpp>
 #include <opencv2/highgui.hpp>
-
+#include <opencv2/core.hpp>
+#include <opencv2/imgproc.hpp>
+#include <opencv2/video.hpp>
 using namespace std;
-
+using namespace cv;
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    VideoCapture capture(0);
+    Mat frame;
+    capture >> frame;
+    while(!frame.empty()){
+        imshow("usb", frame);
+        capture >> frame;
+    }
     return 0;
 }
