@@ -13,6 +13,9 @@ int main() {
     while(!frame.empty()){
         imshow("usb", frame);
         capture >> frame;
+        if(waitKey(10)=='q'){
+            break;
+        }
     }
     return 0;
 }
