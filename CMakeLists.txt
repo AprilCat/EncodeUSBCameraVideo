@@ -14,4 +14,6 @@ link_libraries(
         opencv_videoio
 )
 
-add_executable(vaapi_test main.cpp)
+file(GLOB sources "./*.cpp" "./*.h")
+
+add_executable(vaapi_test ${sources})
