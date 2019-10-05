@@ -1,13 +1,5 @@
 
-#include <opencv2/opencv.hpp>
-#include <opencv2/highgui.hpp>
-#include <opencv2/core.hpp>
-#include <opencv2/imgproc.hpp>
-#include <opencv2/video.hpp>
 
-#ifdef __cplusplus
-extern "C" {
-#endif
 
 #include <stdio.h>
 #include <string.h>
@@ -16,14 +8,6 @@ extern "C" {
 #include <libavcodec/avcodec.h>
 #include <libavutil/pixdesc.h>
 #include <libavutil/hwcontext.h>
-#ifdef __cplusplus
-}
-#endif
-
-
-#ifdef __cplusplus
-extern "C" {
-#endif
 
 static int width, height;
 static AVBufferRef *hw_device_ctx = NULL;
@@ -217,12 +201,7 @@ int run() {
 //    }
 //    return 0;
 }
-#ifdef __cplusplus
-}
-#endif
 
-using namespace std;
-using namespace cv;
 
 int main(){
     run();

@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.14)
-project(vaapi_test)
+project(vaapi_test C)
 
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_C_STANDARD 11)
 
 link_libraries(
         opencv
@@ -12,17 +12,17 @@ link_libraries(
         opencv_core
         opencv_imgproc
         opencv_videoio
-        avformat
-        avcodec
         avdevice
-        avutil
-        rt
+        avformat
+        avfilter
         avcodec
-        m
-        swscale
         swresample
+        swscale
+        rt
+        m
+        avutil
 )
 
-file(GLOB sources "./*.cpp" "./*.h")
+file(GLOB sources "./*.c" "./*.h")
 
 add_executable(vaapi_test ${sources})
