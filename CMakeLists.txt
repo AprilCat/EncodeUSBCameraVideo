@@ -12,6 +12,15 @@ link_libraries(
         opencv_core
         opencv_imgproc
         opencv_videoio
+        avformat
+        avcodec
+        avdevice
+        avutil
+        rt
+        avcodec
+        m
+        swscale
+        swresample
 )
 
 file(GLOB sources "./*.cpp" "./*.h")
